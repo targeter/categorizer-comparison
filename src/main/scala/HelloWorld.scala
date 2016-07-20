@@ -9,26 +9,27 @@ object HelloWorld {
   val path = "/Users/sietse/repos/cwc/cwc-config/hulk/categorizers"
 
   def main(args: Array[String]) {
-    val master = new File(s"$path/categorizers.xml")
+//    val master = new File(s"$path/categorizers.xml")
 //    val test = new File(s"$path/sbox2-test/categorizers.xml")
 //    val functest = new File(s"$path/sbox2-acceptance/categorizers.xml")
 //    val acc = new File(s"$path/sdujurisprudentie-acceptatie/categorizers.xml")
 //    val prod = new File(s"$path/sdujurisprudentie/categorizers.xml")
 
 //    val cats = parseCategorizers(new File("/Users/sietse/cats.xml"))
-    val cats = parseCategorizers(new File(s"/Users/sietse/Downloads//categorizers (7).xml"))
+    val cats = parseCategorizers(new File(s"/Users/sietse/Downloads//categorizers (11).xml"))
 
-    val masterResults = parseCategorizers(master).toSeq
+//    val masterResults = parseCategorizers(master).toSeq
 //    val testResults = parseCategorizers(test).toSeq
 //    val functestResults = parseCategorizers(functest).toSeq
 //    val accResults = parseCategorizers(acc).toSeq
 //    val prodResults = parseCategorizers(prod).toSeq
 
-    println("master -> cats: ")
-    masterResults.diff(cats).foreach(println)
+//    println("master -> cats: ")
+//    masterResults.diff(cats).foreach(println)
 //    masterResults.diff(testResults).foreach(println)
-    println("cats -> master: ")
-    cats.diff(masterResults).foreach(println)
+//    println("cats -> master: ")
+//    cats.diff(masterResults).foreach(println)
+    println(duplicates(cats))
 //    testResults.diff(masterResults).foreach(println)
 //
 //    println("master -> functest: ")
